@@ -86,6 +86,12 @@
     {{ page.date | date(format="%F") }}
 </time>
 {% endif %}
+{% if page.updated %}
+| Last updated
+    <time datetime="{{ page.updated | date(format="%F") }}">
+    {{ page.updated | date(format="%F") }}
+</time>
+{% endif %}
 {% endmacro post_footer_date %}
 
 
