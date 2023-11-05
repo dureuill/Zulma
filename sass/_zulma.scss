@@ -25,6 +25,15 @@ main {
   }
 }
 
+.index .hero-body {
+  background-image: url(intel.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.6);
+  background-blend-mode: overlay;
+}
+
 .hero .title {
   font-size: 3rem;
 }
