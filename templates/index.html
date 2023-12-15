@@ -22,22 +22,26 @@
     {{ index_macros::css() }}
     <!-- This script must follow css -->
     {% if config.extra.zulma_allow_theme_selection %}
-    <script type="text/javascript" src="{{ get_url(path="js/zulma_switchcss.js") }}"></script>
+    <script type="text/javascript" src="{{ get_url(path=" js/zulma_switchcss.js") }}"></script>
     <script>
         switch_css.init("{{config.base_url | safe}}");
     </script>
     {% endif %}
 
     {% if config.generate_rss %}
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml") | safe }}">
+    <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path=" rss.xml") | safe }}">
     {% endif %}
 
     {% if config.build_search_index %}
-    <script defer type="text/javascript" src="{{ get_url(path="elasticlunr.min.js") }}"></script>
-    <script defer type="text/javascript" src="{{ get_url(path="search_index.en.js") }}"></script>
+    <script defer type="text/javascript" src="{{ get_url(path=" elasticlunr.min.js") }}"></script>
+    <script defer type="text/javascript" src="{{ get_url(path=" search_index.en.js") }}"></script>
     {% endif %}
 
     {% block extra_head %}
+    <meta data-rh="true" property="og:type" content="website">
+    <meta data-rh="true" property="og:title" content="Naming is hard">
+    <meta data-rh="true" property="og:url" content="{{config.base_url}}">
+    <meta data-rh="true" property="og:image" content="{{config.base_url}}/intel.jpg">
     {% endblock extra_head %}
 
     <noscript>
@@ -88,10 +92,10 @@
     {{ index_macros::footer() }}
     {% endblock footer %}
 
-    <script type="text/javascript" src="{{ get_url(path="js/zulma_navbar.js") }}"></script>
+    <script type="text/javascript" src="{{ get_url(path=" js/zulma_navbar.js") }}"></script>
 
     {% if config.build_search_index %}
-    <script type="text/javascript" src="{{ get_url(path="js/zulma_search.js") }}"></script>
+    <script type="text/javascript" src="{{ get_url(path=" js/zulma_search.js") }}"></script>
     {% endif %}
 
     {% endblock body%}
