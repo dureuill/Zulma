@@ -11,7 +11,7 @@
 <meta data-rh="true" property="og:title" content="{{page.title}}">
 <meta data-rh="true" property="og:url" content="{{page.permalink}}">
 <meta data-rh="true" property="og:image" content="{{config.base_url}}/intel.jpg">
-<meta data-rh="true" property="og:description" content="{{page.summary}}">
+<meta data-rh="true" property="og:description" content="{{page.summary | striptags}}">
 {% endblock extra_head %}
 {% endblock header %}
 <!-- END NAV -->
